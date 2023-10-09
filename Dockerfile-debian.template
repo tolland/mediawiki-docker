@@ -22,14 +22,15 @@ RUN set -eux; \
 	apt-get install -y --no-install-recommends \
 		libicu-dev \
 		libonig-dev \
+    libpq-dev \
 	; \
 	\
 	docker-php-ext-install -j "$(nproc)" \
 		calendar \
 		intl \
 		mbstring \
-		mysqli \
 		opcache \
+    pgsql \
 	; \
 	\
 	pecl install APCu-%%APCU_VERSION%%; \
