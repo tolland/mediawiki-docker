@@ -22,7 +22,7 @@ RUN set -eux; \
 	apt-get install -y --no-install-recommends \
 		libicu-dev \
 		libonig-dev \
-    libpq-dev \
+		libpq-dev \
 	; \
 	\
 	docker-php-ext-install -j "$(nproc)" \
@@ -30,7 +30,7 @@ RUN set -eux; \
 		intl \
 		mbstring \
 		opcache \
-    pgsql \
+		pgsql \
 	; \
 	\
 	pecl install APCu-5.1.21; \
